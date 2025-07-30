@@ -38,12 +38,43 @@
        if(5){
         console.log('Truthy');
        }
-       
+
        if(0){
         console.log('Truthy');
        }else{
         console.log('Falsy');
        }
+       console.log(!0); //True
+       console.log('yes'/3); //NaN
+       let variable1;
+       console.log(variable1);
+
+       //Ternary operators
+       const result=(10>2)?'yes':'no';
+       console.log(result); //yes
+
+       //Guard operator
+       const res=true && 10>12;
+       console.log(res); //false because 10 is not more than 12
+
+       const resu=true && 10>2;
+       console.log(resu); //true bcoz both conditions are true
+
+       const resul=false && 10>2;
+       console.log(resul); //false bcoz the first condition is false
+
+       //Default operator
+       const res1=true || 10>12;
+       console.log(res1); //true bcoz first condition is true
+
+       const res2=true || 10>2;
+       console.log(res2); //true bcoz both condition is true
+
+       const res3=false || 10>2;
+       console.log(res3); //true bcoz last condition is true
+
+       const res4=false || 10>12;
+       console.log(res4); //false bcoz first condition is true
       </script>
     </body>
   </html>
