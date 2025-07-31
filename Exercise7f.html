@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Exercise 7f</title>
+    </head>
+    <body>
+
+      <script>
+       function convertToCelsius(fahrenheit){
+        let celsius=(fahrenheit - 32)* 5/9;
+        return celsius;
+       }
+
+       function convertToFahrenheit(celsius){
+        let fahrenheit=(celsius*9/5) + 32;
+        return fahrenheit;
+       }
+
+       function convertTemperature(degrees,unit){
+        if(unit==='C'){
+          let newTemperature= convertToFahrenheit(degrees);
+          return `${newTemperature}F`
+        }else if(unit==='F'){
+          let newTemperature= convertToCelsius(degrees);
+          return `${newTemperature}C`
+        }
+       }
+       console.log(convertTemperature(25,'C')); //77F
+       console.log(convertTemperature(86,'F')); //30C
+       console.log(typeof convertTemperature(25,'C')); //string
+       console.log(typeof convertTemperature(86,'F')); //string
+      </script>
+    </body>
+  </html>
