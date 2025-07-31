@@ -3,19 +3,16 @@
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Exercise 7c</title>
+      <title>Exercise 7d</title>
     </head>
     <body>
 
       <script>
-       function greet(name){
-        if(name===undefined){
-         console.log('Hi there!')
-        }else{
-          console.log(`Hello ${name}!`);
-        } 
+       function convertToFahrenheit(celsius){
+        let fahrenheit=(celsius*9/5) + 32;
+        return fahrenheit;
        }
-       greet();
+       console.log(convertToFahrenheit(25));
       </script>
     </body>
   </html>
