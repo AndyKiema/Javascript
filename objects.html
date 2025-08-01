@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Objects</title>
+    </head>
+    <body>
+
+      <script>
+       const product={
+        name:'socks',
+        price:1090
+       };
+       console.log(product); //{name: 'socks', price: 1090}
+       console.log(product.name); //socks
+       console.log(product.price); //1090
+       product.name='laptop';
+       console.log(product); //{name: 'laptop', price: 1090}
+       product.availability='available';
+       console.log(product); //{name: 'laptop', price: 1090, availability: 'available'}
+       delete product.availability;
+       console.log(product); //{name: 'laptop', price: 1090}
+       console.log(typeof product); //object
+      </script>
+    </body>
+  </html>
