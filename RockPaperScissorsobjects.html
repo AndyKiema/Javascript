@@ -32,7 +32,7 @@
 
         let score=JSON.parse(localStorage.getItem('score')); 
 
-        if(!score){
+        if(!score){//Checks if score object is non-existent and assigns zeros to its keys if it is non-existent
           score={
             wins:0,
             losses:0,
