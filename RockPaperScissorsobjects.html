@@ -23,7 +23,7 @@
       ">Scissors</button>
       
       <button onclick="
-        score.wins=0;
+        score.wins=0; //wins, losses and ties still have to be assigned 0 because the previous scores are still in the RAM and will be displayed if page is not refreshed
         score.losses=0;
         score.ties=0;
         localStorage.removeItem('score'); //This is to delete saved score on local storage
