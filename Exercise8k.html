@@ -18,10 +18,7 @@
       <script>
 
        let result='';
-       const score=JSON.parse(localStorage.getItem('score')) || { //This is retrieving the value from the localStorage
-         wins:0,
-         losses:0
-       };
+       const score=JSON.parse(localStorage.getItem('score')); //This is retrieving the value from the localStorage
 
        function compGuess(){
         let num=Math.random();
