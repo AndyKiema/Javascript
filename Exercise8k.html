@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Exercise 8k</title>
+    </head>
+    <body>
+      <button onclick="
+        compGuess();
+        playGame('heads');
+        ">heads</button>
+      <button onclick="
+        compGuess();
+        playGame('tails');
+      ">tails</button>
+
+      <script>
+
+       let result='';
+       const score=JSON.parse(localStorage.getItem('score')) || { //This is retrieving the value from the localStorage
+         wins:0,
+         losses:0
+       };
+
+       function compGuess(){
+        let num=Math.random();
+        if(num<0.5){
+        result='heads';
+        }else{
+        result='tails';
+        }
+       }
+        
+
+       function playGame(playerGuess){
+        if(result===playerGuess){
+        score.wins++;
+        console.log(`You win! Wins:${score.wins}. Losses:${score.losses}`);
+
+        }else{
+        score.losses++;
+        console.log(`You lose! Wins:${score.wins}. Losses:${score.losses}`);
+        }
+
+        localStorage.setItem('score',JSON.stringify(score));
+
+       }
+       
+      </script>
+    </body>
+  </html>
