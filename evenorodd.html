@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Even or Odd</title>
+    </head>
+    <body>
+      <p>Guess whether the number I am thinking about is even or odd</p>
+      <button onclick="
+        compSelection();
+        playerSelection('Even');
+        ">Even</button>
+      <button onclick="
+        compSelection();
+        playerSelection('Odd');
+      ">Odd</button>
+      <script>
+        
+        let result='';
+        let rand;
+
+        function compSelection(){
+          rand=Math.round(Math.random()*10);
+          if(rand%2==0){
+            result='Even';
+          }else{
+            result='Odd';
+          }
+        }
+        
+        let decision='';
+        function playerSelection(guess){
+          if(guess===result){
+           decision='Correct!';
+          }else{
+           decision='Wrong!';
+          }
+          alert(`${decision} The number is ${rand} and is ${result}`);
+        }
+       
+      </script>
+    </body>
+  </html>
