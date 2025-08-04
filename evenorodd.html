@@ -11,14 +11,26 @@
         compSelection();
         playerSelection('Even');
         ">Even</button>
+
       <button onclick="
         compSelection();
         playerSelection('Odd');
       ">Odd</button>
+
+      <button onclick="
+       localStorage.removeItem('scores');
+       score.wins=0;
+       score.losses=0;
+      ">Reset Score</button>
+
       <script>
         
         let result='';
         let rand;
+        const score= JSON.parse(localStorage.getItem('scores')) ||{
+          wins:0,
+          losses:0
+        };
 
         function compSelection(){
           rand=Math.round(Math.random()*10);
@@ -33,10 +45,13 @@
         function playerSelection(guess){
           if(guess===result){
            decision='Correct!';
+           score.wins++;
           }else{
            decision='Wrong!';
+           score.losses++;
           }
-          alert(`${decision} The number is ${rand} and is ${result}`);
+          localStorage.setItem('scores', JSON.stringify(score));
+          alert(`${decision} The number is ${rand} and is ${result}. Wins:${score.wins} Losses:${score.losses}`);
         }
        
       </script>
