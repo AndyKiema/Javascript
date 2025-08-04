@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>DOM</title>
+    </head>
+    <body>
+      <button>Hello</button>
+      <button class="js-button">Second button</button>
+      <script>
+        console.log(document.querySelector('button').innerHTML); //Hello. Takes the first button and adds it to the script section
+        document.querySelector('button').innerHTML='changed';
+        console.log(document.querySelector('.js-button').innerHTML); //Second button
+        const buttonElement=document.querySelector('.js-button').innerHTML;
+        console.log(buttonElement); //Second button
+        document.querySelector('.js-button').innerHTML='second one changed';
+        /*console.log(document.title);
+        document.title='Changed';
+        console.log(document.body);
+        console.log(typeof document.body); //object
+        console.log(document.body.innerHTML); //Shows entire code from body to script
+        document.body.innerHTML='<button>Great</button>';*/
+      // document.body.innerHTML='hello'; //Removes everything in the body and replaces with 'hello' string
+       //document.title='praco' changes title to praco
+      </script>
+    </body>
+  </html>
