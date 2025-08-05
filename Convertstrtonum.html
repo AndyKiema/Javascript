@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Convert String to Number</title>
+    </head>
+    <body>
+      <script>
+       //parseInt
+       var myString='3.5 dollar';
+       var converted=parseInt(myString);
+       console.log(converted); //3
+       console.log(typeof converted); //number
+       
+       //parseFloat
+       var myString='3.5 dollar';
+       var converted=parseFloat(myString);
+       console.log(converted); //3.5
+       console.log(typeof converted); //number
+
+       //Number
+       var myString='3.5 dollar';
+       var converted=Number(myString);
+       console.log(converted); //NaN
+       console.log(typeof converted); //number 
+
+       var myString='3.5';
+       var converted=Number(myString);
+       console.log(converted); //3.5
+       console.log(typeof converted); //number 
+
+      </script>
+    </body>
+  </html>
