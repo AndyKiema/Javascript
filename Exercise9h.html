@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Exercise 9h</title>
+    </head>
+    <body>
+      <input onkeyup="typeText()">
+      <p class="typed-text"></p>
+      <script>
+        function typeText(){
+          let text=document.querySelector('input').value
+          let displayedText=document.querySelector('.typed-text');
+          displayedText.innerHTML=`${text}`;
+        }
+        
+      </script>
+    </body>
+  </html>
