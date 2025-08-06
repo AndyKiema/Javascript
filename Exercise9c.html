@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Exercise 9c</title>
+    </head>
+    <body>
+      <button onclick="
+        clickedButton('heads');
+        ">heads</button>
+      <button onclick="
+        clickedButton('tails');
+      ">tails</button>
+      <p class="chosen-one"></p>
+      <script>
+       function clickedButton(button){
+        let chosenText=document.querySelector('.chosen-one');
+        if(button==='heads'){
+          chosenText.innerHTML='You chose: heads';
+        }else if(button==='tails'){
+          chosenText.innerHTML='You chose: tails';
+        }
+       }
+      </script>
+    </body>
+  </html>
