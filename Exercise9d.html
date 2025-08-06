@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Exercise 9d</title>
+    </head>
+    <body>
+      <input class="input-box" onkeydown="
+        pressEnter(event)
+        ">
+      <button class="submit-button" onclick="
+        displayText();
+      ">Submit</button>
+      <p class="name-text"></p>
+      <script>         
+        function displayText(){
+          let text=document.querySelector('.name-text');
+          let name=document.querySelector('.input-box');
+          text.innerHTML=`Your name is ${name.value}`;
+        }
+        function pressEnter(event){
+         if(event.key==='Enter'){
+          displayText();
+         }
+        }
+      </script>
+    </body>
+  </html>
