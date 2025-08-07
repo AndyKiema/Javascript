@@ -40,8 +40,11 @@
       <button onclick="
        checkCost();
       " class="calc-button">Calculate</button>
+
       <p class="total-cost"></p>
+
       <script>
+
        function checkCost(){
         let cost=parseFloat(document.querySelector(".inputfld").value); //or inputElement.value
         let fullCost=document.querySelector(".total-cost");
@@ -57,6 +60,7 @@
           checkCost();
         }
        }   
+       
       </script>
     </body>
   </html>
