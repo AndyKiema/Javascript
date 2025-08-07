@@ -154,11 +154,11 @@
 
         function showMoves(playerMove){
           if(playerMove==='rock'){
-           document.querySelector(".js-moves").innerHTML=`You picked rock - Computer picked ${computerMove}`;
+           document.querySelector(".js-moves").innerHTML=`You picked <img src='./Images/rock-emoji.png' class='move-emoji'> - Computer picked <img src='./Images/${computerMove}-emoji.png' class='move-emoji'>`;
           }else if(playerMove==='paper'){
-            document.querySelector(".js-moves").innerHTML=`You picked paper - Computer picked ${computerMove}`; 
+            document.querySelector(".js-moves").innerHTML=`You picked <img src='./Images/paper-emoji.png' class='move-emoji'> - Computer picked <img src='./Images/${computerMove}-emoji.png' class='move-emoji'>`; 
           }else if(playerMove==='scissors'){
-            document.querySelector(".js-moves").innerHTML=`You picked scissors - Computer picked ${computerMove}`;  
+            document.querySelector(".js-moves").innerHTML=`You picked <img src='./Images/scissors-emoji.png' class='move-emoji'> - Computer picked <img src='./Images/${computerMove}-emoji.png' class='move-emoji'>`;  
           }  
         }
 
