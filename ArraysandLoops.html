@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Arrays and Loops</title>
+    </head>
+    <body>
+      <script>
+        const myArray=[10,20,30];
+        console.log(myArray);
+        console.log(myArray[0]); //10
+        console.log(myArray[1]); //20
+        console.log(myArray[2]); //30
+        myArray[0]=90;
+        console.log(myArray); //[90, 20, 30]
+        const myArray2=[1,'hello',true,{name:'socks'},[1,2]];
+        console.log(typeof myArray2); //object
+        console.log(Array.isArray(myArray2)); //true
+        console.log(myArray.length); //3
+        myArray.push(100);
+        console.log(myArray); //[90, 20, 30, 100]
+      </script>
+    </body>
+  </html>
