@@ -3,6 +3,7 @@ const todoList=[];
 function addTodo(){
   const inputField=document.querySelector(".js-input-one");
   todoList.push(inputField.value);
+  inputField.value='';
 }
 function addToHTML(){
   let htmlList='';
