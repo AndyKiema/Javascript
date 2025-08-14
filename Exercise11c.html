@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 11c</title>
+</head>
+<body>
+  <script>
+
+    function arraySwap(array){
+
+     let swappedArray=[];
+     swappedArray.push(array[array.length - 1]);
+     
+      for(j=1; j<array.length-1; j++){
+        swappedArray.push(array[j]);
+      }
+
+     swappedArray.push(array[0]);
+
+     return swappedArray; 
+    }
+
+    console.log(arraySwap([1,2,3,4,5]));
+    console.log(arraySwap(['Hello','Hey','Man!']));
+    console.log(arraySwap([10,30,50,70,90]));
+    console.log(arraySwap([1,2]));
+  </script>
+</body>
+</html>
