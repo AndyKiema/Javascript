@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 11n</title>
+</head>
+<body>
+  <script>
+   
+   function countWords(words){
+    let newObject={};
+    let firstWord=words[0];
+    newObject[firstWord]=1;
+    for(let i=1; i<words.length; i++){
+      let nextWord=words[i];
+      if(words[i]==firstWord){
+        newObject[firstWord]++;
+      }else if(newObject[nextWord]){     
+        newObject[nextWord]++;
+      }else{
+        newObject[nextWord]=1;
+      }
+    }
+    return newObject;
+   }
+   console.log(countWords(['apple','mango','apple','apple','mango','apple']));
+   console.log(countWords(['yes','yes','yes','no','no','no','perhaps']));
+    
+  </script>
+</body>
+</html>
