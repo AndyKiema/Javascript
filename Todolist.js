@@ -1,5 +1,23 @@
 const todoList=[];
 
+function addToHTML(){
+  let htmlList='';
+  for(let i=0;i<todoList.length;i++){
+   let toDoObject=todoList[i];
+   const {name, dueDate}=toDoObject;
+   const HTML=`
+   <div>${name}</div>
+   <div>${dueDate}</div>  
+   <button onclick="
+    todoList.splice(${i},1);
+    addToHTML();
+   ">Delete</button>`;
+   htmlList+=HTML;  
+  }
+  const textDiv=document.querySelector(".todo-container");
+  textDiv.innerHTML=htmlList;
+}
+
 function addTodo(){
   const inputField=document.querySelector(".js-input-one");
   const datePicker=document.querySelector(".calendar");
@@ -8,21 +26,5 @@ function addTodo(){
     dueDate: datePicker.value
   });
   inputField.value='';
-}
-function addToHTML(){
-  let htmlList='';
-  for(let i=0;i<todoList.length;i++){
-   let toDoObject=todoList[i];
-   const {name, dueDate}=toDoObject;
-   let HTML=`
-   <div>${name}</div>
-   <div>${dueDate}</div>  
-   <button onclick="
-    todoList.splice(${i},1);
-    addToHTML();
-   ">Delete</button>`;
-   htmlList+=HTML;
-   const textDiv=document.querySelector(".todo-container");
-   textDiv.innerHTML=htmlList;
-  }
+  datePicker.value='';
 }
