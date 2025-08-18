@@ -2,20 +2,25 @@ const todoList=[];
 
 function addTodo(){
   const inputField=document.querySelector(".js-input-one");
-  todoList.push(inputField.value);
+  const datePicker=document.querySelector(".calendar");
+  todoList.push({
+    name: inputField.value,
+    dueDate: datePicker.value
+  });
   inputField.value='';
 }
 function addToHTML(){
   let htmlList='';
   for(let i=0;i<todoList.length;i++){
-   let toDo=todoList[i];
-   let HTML=`<p>
-   ${toDo}
+   let toDoObject=todoList[i];
+   const {name, dueDate}=toDoObject;
+   let HTML=`
+   <div>${name}</div>
+   <div>${dueDate}</div>  
    <button onclick="
     todoList.splice(${i},1);
     addToHTML();
-   ">Delete</button>
-   </p>`
+   ">Delete</button>`;
    htmlList+=HTML;
    const textDiv=document.querySelector(".todo-container");
    textDiv.innerHTML=htmlList;
