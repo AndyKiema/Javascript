@@ -7,7 +7,7 @@
     </head>
     <body>
       <script>
-        const myArray=[10,20,30];
+        /*const myArray=[10,20,30];
         console.log(myArray);
         console.log(myArray[0]); //10
         console.log(myArray[1]); //20
@@ -45,7 +45,32 @@
        for(let i=0;i<myArray.length;i++){
         doubledArray.push(myArray[i]*2);
        }
-       console.log(doubledArray);
+       console.log(doubledArray);*/
+       const array1=[1,2,3];
+       const array2=array1.slice();
+       array2.push(4);
+       console.log(array1);
+       console.log(array2);
+
+       const [firstValue, secondValue, thirdValue, fourthValue]=[1,2,3,4];
+       console.log(firstValue); //1
+       console.log(secondValue); //2
+       console.log(thirdValue); //3
+       console.log(fourthValue); //4
+
+       for(let i=0; i<=5; i++){
+        console.log(i);
+        if(i==5){
+          break; //(0,1,2,3,4,5)
+        }
+       }
+
+       for(let i=0; i<=9; i++){
+        if(i==5){
+          continue; //(0,1,2,3,4,6,7,8,9)
+        }
+        console.log(i);
+       }
       </script>
     </body>
   </html>
