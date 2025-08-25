@@ -22,7 +22,7 @@ function addToHTML(){
    <button onclick="
     todoList.splice(${i},1);
     addToHTML();
-   ">Delete</button>`;
+   " class="delete-button">Delete</button>`;
    htmlList+=HTML;  
   }
   const textDiv=document.querySelector(".todo-container");

@@ -6,7 +6,29 @@ body{
   grid-template-columns: 200px 150px 100px;
   column-gap: 10px;
   row-gap: 10px;
+  align-items: center;
+
 }
 .todo-input-fields{
   margin-bottom: 10px;
+}
+.js-input-one, .calendar, .delete-button{
+  font-size: 15px;
+  padding: 6px;
+}
+.add-button{
+  background-color: green;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.delete-button{
+  background-color: darkred;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
