@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 11o</title>
+</head>
+<body>
+
+
+  <script>
+    function lookforSearch(arr){
+      for(let i=0; i<arr.length; i++){
+        if(arr[i]=='search'){
+          return i;
+          break;
+        }
+      }
+      return -1;
+    }
+    console.log(lookforSearch(['hello','world','search','good']));
+    console.log(lookforSearch(['hello','world','good']));
+    console.log(lookforSearch(['hello','world','good','search','code','search']));
+  </script>
+</body>
+</html>
