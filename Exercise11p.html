@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 11p</title>
+</head>
+<body>
+
+
+  <script>
+    function lookforSearch(arr){
+      let allOccurences=[];
+      for(let i=0; i<arr.length; i++){
+        if(arr[i]=='search'){
+          allOccurences.push(i);
+        }
+      }
+      if(allOccurences.length>0){
+        console.log(allOccurences);
+      }else{
+        console.log(-1);
+      }
+    }
+    lookforSearch(['hello','world','search','good']);
+    lookforSearch(['hello','world','good']);
+    lookforSearch(['hello','world','good','search','code','search']);
+  </script>
+</body>
+</html>
